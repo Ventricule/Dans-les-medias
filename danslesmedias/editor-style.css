@@ -1,0 +1,29 @@
+/*
+Theme Name: Twenty Twelve
+Description: Used to style the TinyMCE editor.
+*/
+
+html {
+	font-size: 87.5%;
+}
+html .mceContentBody {
+	max-width: 625px;
+}
+body {
+	color: #444;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+p {
+    margin-bottom: .5rem;
+    line-height: 1.5rem;
+}
+blockquote {
+	border-left: 1rem solid #0D0;
+	margin: 0;
+	padding-left: 2rem
+}
