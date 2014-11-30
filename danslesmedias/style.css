@@ -1,13 +1,13 @@
-﻿/*
-Theme Name: Dans les medias
-Theme URI: 
-Author: SRMPT
-Author URI: 
-Description: 
-Version: 1
-License: 
-License URI: 
-Tags: dans les medias
+/*
+Theme Name: Twenty Twelve
+Theme URI: http://wordpress.org/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 Text Domain: twentytwelve
 
 This theme, like WordPress, is licensed under the GPL.
@@ -83,6 +83,22 @@ ol,
 ul {
 	list-style: none;
 }
+article ol {
+    list-style: initial;
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+article ul {
+    list-style: initial;
+    list-style-type: decimal;
+    margin-left: 2rem;
+}
+article li {
+    font-size: 1rem;
+    line-height: 1.35rem;
+    margin-bottom: 1.35rem;
+    -moz-hyphens: auto;
+}
 blockquote,
 q {
 	quotes: none;
@@ -148,8 +164,8 @@ ins {
 }
 hr {
 	border: 0;
-	height: 1px;
-	margin: 24px;
+	height: 2px;
+	margin-top: 24px;
 	margin-bottom: 1.714285714rem;
 }
 sub,
@@ -215,6 +231,9 @@ p {
 a {
     text-decoration: none;
 }
+article .entry-content a {
+    border-bottom: 2px solid;
+}
 h1 {
     font-family: 'Terminal Grotesque';
 	text-transform: uppercase;
@@ -244,6 +263,7 @@ h3.widget-title {
 }
 #liens.widget{
     margin-top: 1.35rem;
+    margin-bottom: 1.35rem;
 }
 .assistive-text {
     display: none;
@@ -251,7 +271,14 @@ h3.widget-title {
 * {
     box-sizing: border-box;
 }
+article .entry-content h1 { font-size: 4rem; line-height: 4rem; margin-bottom: 1.35rem; }
+article .entry-content h2 { font-size: 3rem; line-height: 3rem; margin-bottom: 1.35rem; }
+article .entry-content h3 { font-size: 2rem; line-height: 2rem; margin-bottom: 1.35rem; }
+article .entry-content h4 { font-size: 1.5rem; line-height: 1.5rem; margin-bottom: 1.35rem; }
+article .entry-content h5 { font-size: 1.3rem; line-height: 1.3rem; margin-bottom: 1.35rem; }
+article .entry-content h6 { font-size: 1.15rem; margin-bottom: 1.35rem; }
 
+article .entry-content h1 strong {font-weight: normal;}
 /***********************************************
                     STRUCTURE
 ***********************************************/
@@ -275,7 +302,7 @@ hgroup {
 }
 #site-navigation {
     position: fixed;
-    width: 100%;
+    width: 88%;
     z-index: 999999999;
     top: 0;
 }
@@ -286,7 +313,7 @@ hgroup {
     display: block;
     position: fixed;
     top: .8rem;
-    left: 1rem;
+    left: 4%;
     padding: 0.6rem 1rem 0.6rem 1rem;
     font-size: 1.2rem;
     font-weight: bolder;
@@ -416,69 +443,6 @@ hgroup {
     visibility: visible;
 }
 
-
-/***********************************************
-                    COMMENTS
-***********************************************/
-#comments {
-    border: 1px solid #BBB;
-    float: none;
-    clear: both;
-    width: 90%;
-    position: relative;
-    display: block;
-    padding: 5% 10%;
-    box-shadow: 3px 3px 0 rgba(0,0,0,0.14);
-}
-#comments .comments-title {
-    margin-bottom: 5%;
-}
-#comments .edit-link {
-    top: 0px;
-    font-size: 0.8rem;
-    right: 0;
-    color: #BBB;
-    margin: 0;
-}
-#comments article {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-shadow: none;
-    min-height: 0;
-    float: none;
-    margin-bottom: 3px;
-}
-#comments .comments-title {
-    border-bottom: 1px solid #BBB;
-    padding-bottom: 1.35rem;
-    margin-bottom: 1.35rem;
-}
-#comments #respond {
-    border-top: 1px solid #BBB;
-    padding-top: 1.35rem;
-}
-#comments textarea {
-    width: 100%;
-    border: 1px solid #BBB;
-    box-shadow: 2px 2px 0 rgba(0,0,0,0.14) inset;
-}
-#comments label {
-    display: none;
-}
-#comments input {
-    border: 1px solid #BBB;
-    background: none repeat scroll 0% 0% transparent;
-    padding: 0.7rem;
-    font-size: 1rem;
-    font-family: "Roboto";
-    box-shadow: 3px 3px 0 rgba(0,0,0,0.14);
-}
-.form-allowed-tags {
-    display: none;
-}
-
 /***********************************************
                     ARCHIVES
 ***********************************************/
@@ -576,6 +540,79 @@ body.category-6 article{
 body.category article .entry-meta > a:first-child{
     display: none;
 }
+
+/***********************************************
+                    COMMENTS
+***********************************************/
+#comments {
+    border: 1px solid #BBB;
+    float: none;
+    clear: both;
+    width: 90%;
+    position: relative;
+    display: block;
+    padding: 5% 10%;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.14);
+}
+#comments .comments-title {
+    margin-bottom: 5%;
+}
+#comments .edit-link {
+    top: 0px;
+    font-size: 0.8rem;
+    right: 0;
+    color: #BBB;
+    margin: 0;
+}
+#comments article {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    min-height: 0;
+    float: none;
+    margin-bottom: 3px;
+}
+#comments .comments-title {
+    border-bottom: 1px solid #BBB;
+    padding-bottom: 1.35rem;
+    margin-bottom: 1.35rem;
+}
+#comments #respond {
+    border-top: 1px solid #BBB;
+    padding-top: 1.35rem;
+}
+#comments textarea {
+    width: 100%;
+    border: 1px solid #BBB;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.14) inset;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+}
+#comments label {
+    width: 100%;
+    display: inline-block;
+}
+#comments input {
+    border: 1px solid #BBB;
+    background: none repeat scroll 0% 0% transparent;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-family: "Roboto";
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.14) inset;
+    width: 100%;
+}
+#comments .form-submit input {
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.14);
+}
+.form-allowed-tags {
+    display: none;
+}
+.leave-reply {
+    display: none;
+}
+
 /***********************************************
                     MEDIA QUERIES
 ***********************************************/
@@ -649,6 +686,13 @@ body.category article .entry-meta > a:first-child{
     
     #meta-3, .widget {
         display: block;
+    }
+    
+    #comments label {
+        width: 50%;
+    }
+    #comments input {
+        width: 49%;
     }
     
 }
@@ -746,36 +790,132 @@ body.category article .entry-meta > a:first-child{
 }
 
 /* ==================  COLORS ================== */
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-h1, h2.site-description, h3.widget-title, #search-3 #searchsubmit, #searchform #s, #search-3 #s, .nav-previous>a, .nav-next>a, article .read-more, article .entry-meta, .dashicons.dashicons-search  {
+h1, h2.site-description, h3.widget-title, #search-3 #searchsubmit, #searchform #s, #search-3 #s, article .read-more, article .entry-meta, .dashicons.dashicons-search {
     color: #0E0;
+
+    animation-name: colorCycle;
+    animation-duration:60s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+
+    -webkit-animation-name: homeCycle;
+    -webkit-animation-duration:60s;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-iteration-count:infinite; 
 }
-#meta-3, #liens.widget, #search-3 #searchsubmit, .nav-previous>a, .nav-next>a, q  {
+#meta-3, #liens.widget, #search-3 #searchsubmit, .nav-previous>a, .nav-next>a, blockquote, q, article .entry-content a {
     border-color : #0E0;
+
+    animation-name: bordercolorCycle;
+    animation-duration:60s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+
+    -webkit-animation-name: homeCycle;
+    -webkit-animation-duration:60s;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-iteration-count:infinite; 
 }
-.nav-previous .meta-nav, .nav-next .meta-nav, .menu-toggle, #home {
+.nav-previous .meta-nav, .nav-next .meta-nav, .menu-toggle, #home, ins, hr {
     background-color: #0E0;
+
+    animation-name: backgroundcolorCycle;
+    animation-duration:60s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+
+    -webkit-animation-name: homeCycle;
+    -webkit-animation-duration:60s;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-iteration-count:infinite; 
 } 
 .menu-toggle, #home, #site-navigation #menu-menu-top li, article {
     border-color: #BBB;
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.14);
 }
-body, #site-navigation #menu-menu-top li, article footer, del {
-    color: #444;
+body, #site-navigation #menu-menu-top li, article footer,.nav-previous>a, .nav-next>a, del {
+    color: #333;
 }
 #site-navigation #menu-menu-top li, #searchform #searchsubmit, .nav-previous>a, .nav-next>a {
     background-color: #FFF;
 }
-.menu-toggle, #home h1, .nav-previous .meta-nav, .nav-next .meta-nav {
+.menu-toggle, #home h1 a, .nav-previous .meta-nav, .nav-next .meta-nav {
     color: #FFF;
 }
-a {
-    color: inherit;
-    text-decoration: none;
+
+@keyframes colorCycle {
+    0% {color:#0E0;}
+    20% {color:#0E0;}
+    22% {color:#0AF;}
+    40% {color:#0AF;}
+    42% {color:#F3F;}
+    60% {color:#F3F;}
+    62% {color:#FA0;}
+    80% {color:#FA0;}
+    82% {color:#0E0;}
 }
-hr {
-    background-color: #ccc;
+
+@-webkit-keyframes colorCycle {
+    0% {color:#0E0;}
+    20% {color:#0E0;}
+    22% {color:#0AF;}
+    40% {color:#0AF;}
+    42% {color:#F3F;}
+    60% {color:#F3F;}
+    62% {color:#FA0;}
+    80% {color:#FA0;}
+    82% {color:#0E0;}
+} 
+
+@keyframes bordercolorCycle {
+    0% {border-border-color:#0E0;}
+    20% {border-color:#0E0;}
+    22% {border-color:#0AF;}
+    40% {border-color:#0AF;}
+    42% {border-color:#F3F;}
+    60% {border-color:#F3F;}
+    62% {border-color:#FA0;}
+    80% {border-color:#FA0;}
+    82% {border-color:#0E0;}
 }
-ins {
-    background: #fff9c0
+
+@-webkit-keyframes bordercolorCycle {
+    0% {border-color:#0E0;}
+    20% {border-color:#0E0;}
+    22% {border-color:#0AF;}
+    40% {border-color:#0AF;}
+    42% {border-color:#F3F;}
+    60% {border-color:#F3F;}
+    62% {border-color:#FA0;}
+    80% {border-color:#FA0;}
+    82% {border-color:#0E0;}
+} 
+
+@keyframes backgroundcolorCycle {
+    0% {background-color:#0E0;}
+    20% {background-color:#0E0;}
+    22% {background-color:#0AF;}
+    40% {background-color:#0AF;}
+    42% {background-color:#F3F;}
+    60% {background-color:#F3F;}
+    62% {background-color:#FA0;}
+    80% {background-color:#FA0;}
+    82% {background-color:#0E0;}
 }
+
+@-webkit-keyframes backgroundcolorCycle {
+    0% {background-color:#0E0;}
+    20% {background-color:#0E0;}
+    22% {background-color:#0AF;}
+    40% {background-color:#0AF;}
+    42% {background-color:#F3F;}
+    60% {background-color:#F3F;}
+    62% {background-color:#FA0;}
+    80% {background-color:#FA0;}
+    82% {background-color:#0E0;}
+}  
